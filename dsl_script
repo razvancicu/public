@@ -1,0 +1,18 @@
+job("Generate_job") {
+	description()
+	keepDependencies(false)
+	disabled(false)
+	concurrentBuild(false)
+	parameters {
+		stringParam("Object", "Undescribed", "ABC")
+	}
+	steps {
+		shell("echo \"$BUILD_NUMBER\"")
+		shell("echo \"$Object\"")
+		
+	}
+	}
+	publishers {
+		downstream("testDownstream", "SUCCESS")
+	}
+}
