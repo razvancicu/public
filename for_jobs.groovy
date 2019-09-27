@@ -1,5 +1,5 @@
 for (i=1; i<=10; i++) {
-  jobs("job-$i"){
+  job("job-$i"){
   
   }
  }
